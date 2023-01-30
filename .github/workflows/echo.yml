@@ -14,10 +14,19 @@ jobs:
   echo:
     runs-on: ubuntu-22.04
     steps:
+      - name: github1
+        run: |
+          echo ${{ github.ref }}
+          echo ${{ github.sha }}
       - uses: actions/checkout@v3
         with:
           ref: ${{ inputs.branch }}
+      - name: github2
+        run: |
+          echo ${{ github.ref }}
+          echo ${{ github.sha }}
       - name: show input
         run: |
           cat ./README.md
       - run: echo ${{ inputs.environment }}
+
