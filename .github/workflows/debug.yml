@@ -23,6 +23,7 @@ jobs:
     steps:
       - run: echo aaaa
   show-environment:
+    needs: [check-review]
     uses: ./.github/workflows/echo.yml
     with:
       text: bbbb
