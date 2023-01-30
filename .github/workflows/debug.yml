@@ -16,5 +16,4 @@ jobs:
     runs-on: ubuntu-22.04
     environment:
       name: ${{github.event.inputs.environment}}
-    steps:
-      - run: echo ${{github.event.inputs.environment}}
+    uses: ./.github/workflows/echo.yml

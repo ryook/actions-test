@@ -1,0 +1,11 @@
+name: echo
+
+on:
+  workflow_call:
+
+
+jobs:
+  echo:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo aaaaa
