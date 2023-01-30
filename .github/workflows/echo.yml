@@ -16,14 +16,14 @@ jobs:
     steps:
       - name: github1
         run: |
-          echo ${{ github.ref }}
+          echo ${{ github.ref_name }}
           echo ${{ github.sha }}
       - uses: actions/checkout@v3
         with:
           ref: ${{ inputs.branch }}
       - name: github2
         run: |
-          echo ${{ github.ref }}
+          echo ${{ github.ref_name }}
           echo ${{ github.sha }}
       - name: show input
         run: |
