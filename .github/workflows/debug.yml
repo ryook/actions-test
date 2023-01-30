@@ -13,8 +13,10 @@ on:
 
 jobs:
   show-enviroments:
-    run: echo ${{github.inputs.enviroment}}
+    steps:
+      - run: echo ${{github.inputs.enviroment}}
 
   check-test:
-    run: echo aaa
     enviroment: ${{github.inputs.enviroment}}
+    steps:
+      - run: echo aaa
