@@ -17,5 +17,5 @@ jobs:
     environment:
       name: ${{github.event.inputs.environment}}
     uses: ./.github/workflows/echo.yml
-      with:
-        text: aaaa
+    with:
+      text: aaaa
