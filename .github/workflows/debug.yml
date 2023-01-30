@@ -15,7 +15,7 @@ jobs:
   show-inputs:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo ${{inputs.text}}
+      - run: echo ${{secrets.HOGE}}
   check-review:
     runs-on: ubuntu-22.04
     environment:
