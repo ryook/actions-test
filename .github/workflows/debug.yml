@@ -13,10 +13,12 @@ on:
 
 jobs:
   show-enviroments:
+    runs-on: ubuntu-22.04
     steps:
       - run: echo ${{github.inputs.enviroment}}
 
   check-test:
+    runs-on: ubuntu-22.04
     environment:
       name: ${{github.inputs.enviroment}}
     steps:
