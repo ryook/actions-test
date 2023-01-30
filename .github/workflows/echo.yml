@@ -14,4 +14,4 @@ jobs:
     steps:
       - name: show input
         run: |
-          echo 'text: ${{ inputs.text }}'
+          echo 'text: ${{secrets.HOGE}}
