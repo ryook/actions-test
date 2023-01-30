@@ -12,6 +12,7 @@ jobs:
   echo:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v3
       - name: show input
         run: |
           cat ./README.md
