@@ -1,0 +1,20 @@
+name: debug
+
+on:
+  workflow_dispatch:
+    inputs:
+      enviroment:
+        description: aaa
+        type: choice
+        options:
+          - dev
+          - stg
+
+
+jobs:
+  show-enviroments:
+    run: echo ${{github.inputs.enviroment}}
+
+  check-test:
+    run: echo aaa
+    enviroment: ${{github.inputs.enviroment}}
