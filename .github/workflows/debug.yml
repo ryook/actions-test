@@ -17,7 +17,6 @@ jobs:
     environment:
       name: ${{github.event.inputs.environment}}
     steps:
-      - uses: actions/checkout@master
       - uses: ./.github/workflows/echo.yml
         with:
           text: aaaa

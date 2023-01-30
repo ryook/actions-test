@@ -12,4 +12,5 @@ jobs:
   echo:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@master
       - run: echo ${{github.event.input.text}}
