@@ -3,7 +3,7 @@ name: debug
 on:
   workflow_dispatch:
     inputs:
-      enviroment:
+      environment:
         description: aaa
         type: choice
         options:
@@ -12,10 +12,10 @@ on:
 
 
 jobs:
-  show-enviroments:
+  show-environment:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo ${{github.inputs.enviroment}}
+      - run: echo ${{github.event.inputs.environment}}
 
   check-test:
     runs-on: ubuntu-22.04
