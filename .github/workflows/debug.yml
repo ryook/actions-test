@@ -22,8 +22,11 @@ jobs:
       name: ${{github.event.inputs.environment}}
     steps:
       - run: echo aaaa
-  show-environment:
+  checkout:
     needs: [check-review]
+    uses: actions/checkout@v3
+  show-environment:
+    needs: [checkout]
     uses: ./.github/workflows/echo.yml
     with:
       text: bbbb
