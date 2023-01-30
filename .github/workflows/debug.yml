@@ -14,12 +14,7 @@ on:
 jobs:
   show-environment:
     runs-on: ubuntu-22.04
+    environment:
+      name: ${{github.event.inputs.environment}}
     steps:
       - run: echo ${{github.event.inputs.environment}}
-
-  check-test:
-    runs-on: ubuntu-22.04
-    environment:
-      name: ${{github.event.inputs.enviroment}}
-    steps:
-      - run: echo aaa
