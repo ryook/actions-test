@@ -9,6 +9,9 @@ on:
         options:
           - dev
           - stg
+      branch:
+        description: branch
+        type: string
 
 
 jobs:
@@ -31,5 +34,5 @@ jobs:
     needs: [checkout]
     uses: ./.github/workflows/echo.yml
     with:
-      text: bbbb
+      branch: ${{github.event.inputs.branch}}
     secrets: inherit
