@@ -2,10 +2,13 @@ name: echo
 
 on:
   workflow_call:
+    inputs:
+      text:
+        description: text
+        type: string
 
 
 jobs:
   echo:
-    runs-on: ubuntu-22.04
     steps:
       - run: echo aaaaa
