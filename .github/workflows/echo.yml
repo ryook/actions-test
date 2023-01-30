@@ -12,6 +12,6 @@ jobs:
   echo:
     runs-on: ubuntu-22.04
     steps:
-      - names: show input
+      - name: show input
         run: |
           echo 'text: ${{ inputs.text }}'
