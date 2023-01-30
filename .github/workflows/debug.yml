@@ -12,10 +12,17 @@ on:
 
 
 jobs:
-  show-environment:
+  show-inputs:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo ${{inputs.text}}
+  check-review:
     runs-on: ubuntu-22.04
     environment:
       name: ${{github.event.inputs.environment}}
+    steps:
+      - run: echo aaaa
+  show-environment:
     uses: ./.github/workflows/echo.yml
     with:
-      text: aaaa
+      text: bbbb
