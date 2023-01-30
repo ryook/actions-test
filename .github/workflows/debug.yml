@@ -15,6 +15,7 @@ jobs:
   show-environment:
     environment:
       name: ${{github.event.inputs.environment}}
-    uses: ./.github/workflows/echo.yml
-    with:
-      text: aaaa
+    steps:
+      - uses: ./.github/workflows/echo.yml
+        with:
+          text: aaaa
