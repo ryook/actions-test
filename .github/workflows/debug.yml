@@ -20,6 +20,6 @@ jobs:
   check-test:
     runs-on: ubuntu-22.04
     environment:
-      name: ${{github.inputs.enviroment}}
+      name: ${{github.event.inputs.enviroment}}
     steps:
       - run: echo aaa
