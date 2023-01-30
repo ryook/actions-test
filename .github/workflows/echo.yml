@@ -10,5 +10,6 @@ on:
 
 jobs:
   echo:
+    runs-on: ubuntu-22.04
     steps:
-      - run: echo aaaaa
+      - run: echo ${{github.event.input.text}}
