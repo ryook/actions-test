@@ -3,7 +3,7 @@ name: echo
 on:
   workflow_call:
     inputs:
-      text:
+      branch:
         description: text
         type: string
 
@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.branch }}
       - name: show input
         run: |
           cat ./README.md
