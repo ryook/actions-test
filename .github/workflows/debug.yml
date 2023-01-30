@@ -21,8 +21,6 @@ jobs:
       - run: echo ${{secrets.HOGE}}
   check-review:
     runs-on: ubuntu-22.04
-    environment:
-      name: ${{github.event.inputs.environment}}
     steps:
       - run: echo aaaa
   checkout:
@@ -35,4 +33,5 @@ jobs:
     uses: ./.github/workflows/echo.yml
     with:
       branch: ${{github.event.inputs.branch}}
+      environment: ${{github.event.inputs.environment}}
     secrets: inherit
