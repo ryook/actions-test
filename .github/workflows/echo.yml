@@ -12,5 +12,6 @@ jobs:
   echo:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
-      - run: echo ${{github.event.input.text}}
+      - uses: actions/checkout@v3
+      - run: git status
+      - run: git branch
