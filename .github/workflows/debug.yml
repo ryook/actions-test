@@ -27,3 +27,4 @@ jobs:
     uses: ./.github/workflows/echo.yml
     with:
       text: bbbb
+    secrerts: inherit
