@@ -17,6 +17,7 @@ jobs:
       - run: echo ${{github.inputs.enviroment}}
 
   check-test:
-    environment: ${{github.inputs.enviroment}}
+    environment:
+      name: ${{github.inputs.enviroment}}
     steps:
       - run: echo aaa
