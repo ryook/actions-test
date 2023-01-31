@@ -5,10 +5,10 @@ on:
 
 jobs:
   runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      - run: echo $(git rev-parse HEAD)
-      - uses: actions/checkout@v3
-        with:
-          ref: dev
-      - run: echo $(git rev-parse HEAD)
+  steps:
+    - uses: actions/checkout@v3
+    - run: echo $(git rev-parse HEAD)
+    - uses: actions/checkout@v3
+      with:
+        ref: dev
+    - run: echo $(git rev-parse HEAD)
