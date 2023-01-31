@@ -4,12 +4,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  github:
+  set-commit-hash:
     runs-on: ubuntu-22.04
+    outputs:
+      commit-hash: ${{ steps.commit-hash.outputs.HASH }}
     steps:
-      - uses: actions/checkout@v3
-      - run: echo $(git rev-parse HEAD)
       - uses: actions/checkout@v3
         with:
           ref: dev
-      - run: echo $(git rev-parse HEAD)
+      - id: commit-hash
+        run: echo "HASH=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+  echo-output:
+    runs-on: ubuntu-22.04
+    needs: set-commit-hash
+    steps:
+      - run: echo ${{needs.set-commit-hash.outputs.HASH}}
+    
